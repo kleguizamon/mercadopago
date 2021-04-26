@@ -56,11 +56,12 @@ class PaymentServices {
 				default_installments: 6,
 			},
 			back_urls: {
-				success: 'cambiar',
-				pending: 'cambiar',
-				failure: 'cambiar',
+				success: 'https://mercadopago-checkout-cert.herokuapp.com/success',
+				pending: 'https://mercadopago-checkout-cert.herokuapp.com/pending',
+				failure: 'https://mercadopago-checkout-cert.herokuapp.com/error',
 			},
-			notification_url: 'httlwebhoo',
+			notification_url:
+				'https://mercadopago-checkout-cert.herokuapp.com/webhook',
 			auto_return: 'approved',
 		};
 
@@ -69,7 +70,6 @@ class PaymentServices {
 				headers: {
 					'Content-type': 'application/json',
 					'x-integrator-id': 'dev_24c65fb163bf11ea96500242ac130004',
-					'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, HEAD',
 				},
 			});
 			return req.data;
