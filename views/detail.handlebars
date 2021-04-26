@@ -73,7 +73,7 @@
                             </div>
 
                         </div>
-                        <div <form action="/payment/new?price={{price}}&unit={{unit}}&name={{
+                        <form action="/payment/new?price={{price}}&unit={{unit}}&name={{
                             title
                         }}&img={{img}}" class="as-producttile-info" style="float:left;min-height: 168px;">
                             <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
@@ -85,20 +85,21 @@
 
                                     </h3>
                                 </div>
-                                <h3>
-                                    {{ price }}
-                                </h3>
+
+                                {{ price }}
+
                                 <h3>
                                     {{ unit }}
+
                                 </h3>
                             </div>
                             <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
+</div>
+<script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
 </div>
