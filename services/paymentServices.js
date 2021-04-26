@@ -13,7 +13,7 @@ class PaymentServices {
 	}
 
 	async createPaymentMercadoPago(name, price, unit, img) {
-		const url = `${this.mercadoPagoUrl}/preferences?acess_token=${this.token.test.access_token}`;
+		const url = `${this.mercadoPagoUrl}/preferences`;
 
 		const items = [
 			{
@@ -70,6 +70,7 @@ class PaymentServices {
 				headers: {
 					'Content-type': 'application/json',
 					'x-integrator-id': 'dev_24c65fb163bf11ea96500242ac130004',
+					'Authorization': `Bearer ${this.token.test.access_token}`,
 				},
 			});
 			return req.data;
