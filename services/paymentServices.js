@@ -9,11 +9,11 @@ class PaymentServices {
 					'APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398',
 			},
 		};
-		// this.mercadoPagoUrl = 'https://api.mercadopago.com/checkout';
+		this.mercadoPagoUrl = 'https://api.mercadopago.com/checkout';
 	}
 
 	async createPaymentMercadoPago(name, price, unit, img) {
-		const url = `https://api.mercadopago.com/checkout/preferences?acess_token=${this.token.test.access_token}`;
+		const url = `${this.mercadoPagoUrl}/preferences?acess_token=${this.token.test.access_token}`;
 
 		const items = [
 			{
@@ -24,7 +24,7 @@ class PaymentServices {
 				category_id: '1234',
 				quantity: parseInt(unit),
 				currency_id: 'ARS',
-				unit_price: parseInt(price),
+				unit_price: parseFloat(price),
 			},
 		];
 
